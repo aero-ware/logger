@@ -22,7 +22,7 @@ export default class Logger {
         console.log(
             colors.green(
                 `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")}${
-                    this.showFlags ? " (SUCCESS) " : ""
+                    this.showFlags ? " (SUCCESS) " : " "
                 }| ${message}`
             )
         );
@@ -36,7 +36,7 @@ export default class Logger {
         console.log(
             colors.blue(
                 `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")}${
-                    this.showFlags ? " (INFO) " : ""
+                    this.showFlags ? " (INFO) " : " "
                 }| ${message}`
             )
         );
@@ -50,7 +50,7 @@ export default class Logger {
         console.log(
             colors.yellow(
                 `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")}${
-                    this.showFlags ? " (WARN) " : ""
+                    this.showFlags ? " (WARN) " : " "
                 }| ${message}`
             )
         );
@@ -64,7 +64,7 @@ export default class Logger {
         console.log(
             colors.red(
                 `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")}${
-                    this.showFlags ? " (ERROR) " : ""
+                    this.showFlags ? " (ERROR) " : " "
                 }| ${message}`
             )
         );
