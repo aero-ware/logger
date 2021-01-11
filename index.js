@@ -18,28 +18,28 @@ class Logger {
      * @param message the message to log
      */
     success(message) {
-        console.log(colors_1.default.green(`[${this.header}] ${date_fns_1.format(Date.now(), "hh:mm:ss aa")} | ${message}`));
+        console.log(colors_1.default.green(`[${this.header}] ${date_fns_1.format(Date.now(), "hh:mm:ss aa")} (SUCCESS) | ${message}`));
     }
     /**
      * Logs the given message in blue
      * @param message the message to log
      */
     info(message) {
-        console.log(colors_1.default.blue(`[${this.header}] ${date_fns_1.format(Date.now(), "hh:mm:ss aa")} | ${message}`));
+        console.log(colors_1.default.blue(`[${this.header}] ${date_fns_1.format(Date.now(), "hh:mm:ss aa")} (INFO) | ${message}`));
     }
     /**
      * Logs the given message in yellow
      * @param message the message to log
      */
     warn(message) {
-        console.log(colors_1.default.yellow(`[${this.header}] ${date_fns_1.format(Date.now(), "hh:mm:ss aa")} | ${message}`));
+        console.log(colors_1.default.yellow(`[${this.header}] ${date_fns_1.format(Date.now(), "hh:mm:ss aa")} (WARNING) | ${message}`));
     }
     /**
      * Logs the given message in red
      * @param message the message to log
      */
     error(message) {
-        console.log(colors_1.default.red(`[${this.header}] ${date_fns_1.format(Date.now(), "hh:mm:ss aa")} | ${message}`));
+        console.log(colors_1.default.red(`[${this.header}] ${date_fns_1.format(Date.now(), "hh:mm:ss aa")} (ERROR) | ${message}`));
     }
 }
 exports.default = Logger;
