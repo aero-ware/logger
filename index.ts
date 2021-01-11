@@ -21,8 +21,8 @@ export default class Logger {
     public success(message: string) {
         console.log(
             colors.green(
-                `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")} ${
-                    this.showFlags ? "(SUCCESS) " : " "
+                `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")}${
+                    this.showFlags ? " (SUCCESS) " : ""
                 }| ${message}`
             )
         );
@@ -35,8 +35,8 @@ export default class Logger {
     public info(message: string) {
         console.log(
             colors.blue(
-                `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")} ${
-                    this.showFlags ? "(INFO) " : " "
+                `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")}${
+                    this.showFlags ? " (INFO) " : ""
                 }| ${message}`
             )
         );
@@ -49,8 +49,8 @@ export default class Logger {
     public warn(message: string) {
         console.log(
             colors.yellow(
-                `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")} ${
-                    this.showFlags ? "(WARN) " : " "
+                `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")}${
+                    this.showFlags ? " (WARN) " : ""
                 }| ${message}`
             )
         );
@@ -63,8 +63,8 @@ export default class Logger {
     public error(message: string) {
         console.log(
             colors.red(
-                `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")} ${
-                    this.showFlags ? "(ERROR) " : " "
+                `[${this.header}] ${format(Date.now(), "hh:mm:ss aa")}${
+                    this.showFlags ? " (ERROR) " : ""
                 }| ${message}`
             )
         );
