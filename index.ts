@@ -1,27 +1,35 @@
 import colors from "colors";
 import { format } from "date-fns";
 
-export default {
-  success(message: string) {
+export default class Logger {
+  public header: string;
+
+  constructor(header?: string) {
+    this.header = header || 'aero-logger';
+  }
+
+  public success(message: string) {
     console.log(
-      colors.green(`[logger] ${format(Date.now(), "hh:mm:ss aa")} | ${message}`)
+      colors.green(`[${this.header}] ${format(Date.now(), "hh:mm:ss aa")} | ${message}`)
     );
-  },
-  info(message: string) {
+  }
+
+  public info(message: string) {
     console.log(
-      colors.blue(`[logger] ${format(Date.now(), "hh:mm:ss aa")} | ${message}`)
+      colors.blue(`[${this.header}] ${format(Date.now(), "hh:mm:ss aa")} | ${message}`)
     );
-  },
-  warn(message: string) {
+  }
+
+  public warn(message: string) {
     console.log(
-      colors.yellow(
-        `[logger] ${format(Date.now(), "hh:mm:ss aa")} | ${message}`
-      )
+      colors.yellow(`[${this.header}] ${format(Date.now(), "hh:mm:ss aa")} | ${message}`)
     );
-  },
-  error(message: string) {
+  }
+
+  public error(message: string) {
     console.log(
-      colors.red(`[logger] ${format(Date.now(), "hh:mm:ss aa")} | ${message}`)
+      colors.red(`[${this.header}] ${format(Date.now(), "hh:mm:ss aa")} | ${message}`)
     );
-  },
-};
+  }
+
+}

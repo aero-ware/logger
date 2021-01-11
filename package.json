@@ -16,5 +16,10 @@
     "url": "https://github.com/aero-ware/logger/issues"
   },
   "homepage": "https://github.com/aero-ware/logger#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@types/date-fns": "^2.6.0",
+    "colors": "^1.4.0",
+    "date-fns": "^2.16.1"
+  }
 }
