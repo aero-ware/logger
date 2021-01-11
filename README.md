@@ -1,16 +1,30 @@
 # logger
 
-logger is a simple logger that logs things to the console.
+Simple logger that has 4 different preset functions.
 
-sometimes you just need a really simple logger to track things, and thats what this is.
+## Usage
+- Import Logger from index
+- Create new Logger (pass in custom header if necessary)
+- Use the 4 provided logger functions!
 
-there are only four simple methods that each log with color, because color is cool.
-
-```js
-const logger = require("@aeroware/logger");
-
-logger.success("SUCCESS");
-logger.info("INFORMATION");
-logger.warn("WARNING");
-logger.error("ERROR");
+## Example
+### TypeScript:
+```ts
+import { Logger } from 'logger';
+const logger: Logger = new Logger('Logger');
+logger.success('Logger is working!');
 ```
+
+### JavaScript:
+```js
+const Logger = require('logger');
+const logger = new Logger('Logger');
+logger.success('Logger is working');
+```
+
+## Functionality
+Logger has 4 logging functions.
+- `Logger.success(message: string)` - logs in green
+- `Logger.info(message: string)` - logs in blue
+- `Logger.warn(message: string)` - logs in yellow
+- `Logger.error(message: string)` - logs in red
