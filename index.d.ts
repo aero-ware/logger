@@ -1,4 +1,4 @@
-export default class Logger {
+declare class Logger {
     header: string;
     showFlags: boolean;
     /**
@@ -27,3 +27,4 @@ export default class Logger {
      */
     error(message: string): void;
 }
+export default Logger;
