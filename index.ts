@@ -60,7 +60,3 @@ class Logger {
 }
 
 export default Logger;
-
-module.exports = Logger;
-
-exports = Logger;
