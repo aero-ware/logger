@@ -44,5 +44,3 @@ class Logger {
     }
 }
 exports.default = Logger;
-module.exports = Logger;
-exports = Logger;
