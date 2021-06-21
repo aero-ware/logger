@@ -1,11 +1,12 @@
 declare class Logger {
     header: string;
     showFlags: boolean;
+    colors: boolean;
     /**
      * Instantiates your Logger with a custom or default header.
      * @param header The header to use when logging messages. Defaults to 'logger'.
      */
-    constructor(header?: string, showFlags?: boolean);
+    constructor(header?: string, colors?: boolean, showFlags?: boolean);
     /**
      * Logs the given message in green.
      * @param message The message to log.
